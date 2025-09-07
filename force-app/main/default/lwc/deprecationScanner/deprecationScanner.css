@@ -1,0 +1,201 @@
+/* Path: force-app/main/default/lwc/deprecationScanner/deprecationScanner.css */
+
+/* Main container styling */
+.findings-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* Finding item styling */
+.finding-item {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.finding-item:hover {
+    background-color: var(--slds-g-color-neutral-base-95);
+    border-left-color: var(--slds-g-color-brand-base-60);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Code snippet styling */
+.code-snippet {
+    background-color: var(--slds-g-color-neutral-base-100);
+    border: 1px solid var(--slds-g-color-border-base-4);
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.code-snippet pre {
+    margin: 0;
+    padding: 1rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Severity indicator colors */
+.severity-high {
+    color: var(--slds-g-color-error-base-40);
+}
+
+.severity-medium {
+    color: var(--slds-g-color-warning-base-60);
+}
+
+.severity-low {
+    color: var(--slds-g-color-success-base-50);
+}
+
+/* Custom badge variants */
+.slds-badge.custom-high {
+    background-color: var(--slds-g-color-error-base-40);
+    color: white;
+}
+
+.slds-badge.custom-medium {
+    background-color: var(--slds-g-color-warning-base-60);
+    color: white;
+}
+
+.slds-badge.custom-low {
+    background-color: var(--slds-g-color-success-base-50);
+    color: white;
+}
+
+/* Statistics grid styling */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.stat-box {
+    background: linear-gradient(135deg, var(--slds-g-color-brand-base-20) 0%, var(--slds-g-color-brand-base-30) 100%);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading state styling */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+/* URL validation styling */
+.url-validation {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.url-validation.valid {
+    color: var(--slds-g-color-success-base-50);
+}
+
+.url-validation.invalid {
+    color: var(--slds-g-color-error-base-40);
+}
+
+/* Modal styling overrides */
+.slds-modal__content {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .findings-container {
+        max-height: 400px;
+    }
+    
+    .finding-item {
+        margin-bottom: 0.75rem;
+    }
+    
+    .code-snippet pre {
+        font-size: 0.6rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Animation for scan progress */
+@keyframes scanProgress {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+.scanning-indicator {
+    animation: scanProgress 2s infinite;
+}
+
+/* Custom scrollbar for findings container */
+.findings-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.findings-container::-webkit-scrollbar-track {
+    background: var(--slds-g-color-neutral-base-95);
+    border-radius: 3px;
+}
+
+.findings-container::-webkit-scrollbar-thumb {
+    background: var(--slds-g-color-neutral-base-80);
+    border-radius: 3px;
+}
+
+.findings-container::-webkit-scrollbar-thumb:hover {
+    background: var(--slds-g-color-neutral-base-70);
+}
+
+/* Tab content spacing */
+.slds-tabs_default__content {
+    padding: 0;
+}
+
+/* Custom alert styling */
+.custom-alert {
+    border-radius: 6px;
+    border-left-width: 4px;
+}
+
+/* Help text styling */
+.help-section {
+    background-color: var(--slds-g-color-neutral-base-99);
+    border-radius: 6px;
+    padding: 1rem;
+    border: 1px solid var(--slds-g-color-border-base-4);
+}
+
+.help-section h3 {
+    color: var(--slds-g-color-brand-base-60);
+}
+
+/* Button group styling */
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .button-group lightning-button {
+        width: 100%;
+    }
+}

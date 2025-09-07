@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Path: force-app/main/default/applications/DeprecationScanner.app-meta.xml -->
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#1B96FF</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Application for scanning GitHub repositories for deprecated Salesforce components</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Deprecation Scanner</label>
+    <navType>Standard</navType>
+    <tabs>Deprecation_Scanner</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

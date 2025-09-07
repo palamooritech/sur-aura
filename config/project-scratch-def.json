@@ -1,0 +1,28 @@
+{
+  "orgName": "Deprecation Scanner Dev Org",
+  "description": "Scratch org for Salesforce Deprecation Scanner development",
+  "edition": "Developer",
+  "features": [
+    "EnableSetPasswordInApi",
+    "LightningServiceConsole",
+    "ServiceCloud"
+  ],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    },
+    "securitySettings": {
+      "enableAdminLoginAsAnyUser": true,
+      "enableAuditFieldsInactiveOwner": false,
+      "enableCrossOrgRedirect": true,
+      "enableDefault15CharacterUsernames": true,
+      "enableEnhancedProfileUserInterface": true
+    },
+    "unifiedSetupSettings": {
+      "enableEnhancedProfileUserInterface": true
+    }
+  }
+}
